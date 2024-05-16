@@ -1,19 +1,21 @@
+
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
-    vector<int> arr={1,2,3,4,5,6};
-    int mid=(0+arr.size())/2;
-    int i=0,j=arr.size()-1;
-    while(i<j){
-        int temp=arr[i];
-        arr[i]=arr[j];
-        arr[j]=temp;
-        i++;
-        j--;
-    }
+
+int main()
+{
+    int a;
+    cout<<"enter a number: ";
+    cin>>a;
     
-    for(auto it:arr){
-        cout<<it<<" ";
+    int count = 0;
+    while(a>0){
+        if(a&1){
+            count+=1;
+        }
+        a=a>>1;
     }
+    cout<<count;
+
     return 0;
 }

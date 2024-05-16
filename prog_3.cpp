@@ -1,10 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
-    vector<int> arr={1,2,3,4,5,6};
-    reverse(arr.begin(), arr.end());
-    for(auto it:arr){
-        cout<<it<<" ";
+
+int main()
+{
+    int a, b;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    
+    cout << "Before swap: " << a << " " << b << endl;
+    
+    if (a == b) {
+        cout << "After swap: " << a << " " << b;
+    } else {
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+        cout << "After swap: " << a << " " << b;
     }
+    
     return 0;
 }

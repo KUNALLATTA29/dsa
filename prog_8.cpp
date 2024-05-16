@@ -1,10 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    vector<int> arr={1,2,3,6,4,5};
-    int k=3;
-    nth_element(arr.begin(),arr.begin()+k-1,arr.end());
-    cout<<arr[k-1];
+int main() {
+    int a;
+    cout << "Enter a number: ";
+    cin >> a;
+    
+    int c = 0;
+    
+    while ((a & 1) == 0) {
+        c++;
+        a = a >> 1;
+    }
+    
+    cout << c;
     return 0;
 }

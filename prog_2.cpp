@@ -1,14 +1,26 @@
+
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
-    vector<int> arr={1,2,3,4,5,6};
-    vector<int> arr1;
-    for(int i=arr.size()-1;i>=0;i--){
-        arr1.push_back(arr[i]);
-    }
+
+int main()
+{
+    int a;
+    cout<<"enter a number: ";
+    cin>>a;
     
-    for(auto it:arr1){
-        cout<<it<<" ";
+    int count = 0;
+    int b= a;
+    while(a>0){
+        if(a&1){
+            count+=1;
+        }
+        a=a>>1;
     }
+    if(count==1 && b>0){
+        cout<<"given number is power of 2";
+    }else{
+        cout<<"it's not the power of 2";
+    }
+
     return 0;
 }

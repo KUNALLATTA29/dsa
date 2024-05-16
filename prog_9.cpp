@@ -1,11 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    vector<int> arr={1,2,3,6,4,5};
-    int k=3;
-    int n=arr.size();
-    nth_element(arr.begin(),arr.begin()+n-k,arr.end());
-    cout<<arr[n-k];
+int main() {
+    int a;
+    cout << "Enter a number: ";
+    cin >> a;
+    
+    int b;
+    cout << "Enter 2nd number: ";
+    cin >> b;
+    
+    int c=0;
+    for(int i=a;i<=b;i++){
+        c ^=i;
+    }
+   cout<<c;
     return 0;
 }
