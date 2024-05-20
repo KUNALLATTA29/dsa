@@ -1,11 +1,32 @@
-#include <bits/stdc++.h>
-using namespace std;
 
-int main(){
-    vector<int> arr={1,2,3,6,3,5};
-    sort(arr.begin(),arr.end());
+#include <iostream>
+using namespace std;
+int main()
+{
+    int age, t;
     
-    cout<<arr[0]<<endl;
-    cout<<arr[arr.size()-1];
+    
+    cout<<"enter age: ";
+    cin>> age;
+    
+    cout<<"enter time(0-24): ";
+    cin>> t;
+   
+    
+    if(age<=12){
+        if(t<17){
+            cout<< 100 - (100*0.10);
+        }else{
+            cout<< 100 - (100*0.05);
+        }
+    }else{
+        if(t<17){
+            cout<< 100 - (100*0.05);
+        }else{
+            cout<< 100;
+        }
+    }
+    
+    
     return 0;
 }

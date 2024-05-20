@@ -1,20 +1,22 @@
-#include <bits/stdc++.h>
-using namespace std;
 
+#include <iostream>
+using namespace std;
 int main()
 {
-    int a;
-    cout<<"enter a number: ";
-    cin>>a;
+    int w, charge;
     
-    int b;
-    cout<<"enter a bit number you want to change(0-31): ";
-    cin>>b;
     
-    int x=1<<b;
-    a=a|x;
+    cout<<"enter your weight: ";
+    cin>> w;
     
-    cout<<"new number is: "<<a;
+   
     
+    if(w<=5){
+        charge=60;
+    }else{
+        charge=60 + 10* (w-5);
+    }
+    
+    cout<<charge;
     return 0;
 }

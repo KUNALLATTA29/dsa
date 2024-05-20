@@ -1,19 +1,23 @@
-#include <bits/stdc++.h>
-using namespace std;
 
-int main() {
-    int a;
-    cout << "Enter a number: ";
-    cin >> a;
+#include <iostream>
+using namespace std;
+int main()
+{
+    int tem;
     
-    int b;
-    cout << "Enter 2nd number: ";
-    cin >> b;
     
-    int c=0;
-    for(int i=a;i<=b;i++){
-        c ^=i;
+    cout<<"enter temprature: ";
+    cin>> tem;
+    
+    if(tem>=40){
+        cout<<"HOT";
+    }else if(tem>=20){
+        cout<<"MODERATE";
+    }else{
+        cout<<"COLD";
     }
-   cout<<c;
+    
+   
+    
     return 0;
 }

@@ -1,25 +1,21 @@
 
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-
 int main()
 {
-    int a;
-    cout<<"enter a number: ";
-    cin>>a;
+    int age;
+    string subs;
     
-    int count = 0;
-    int b= a;
-    while(a>0){
-        if(a&1){
-            count+=1;
-        }
-        a=a>>1;
-    }
-    if(count==1 && b>0){
-        cout<<"given number is power of 2";
+    cout<<"enter your age: ";
+    cin>> age;
+    
+    cout<<"enter your subscription: ";
+    cin>> subs;
+    
+    if(age>= 18 & subs=="valid"){
+        cout<<"access done";
     }else{
-        cout<<"it's not the power of 2";
+        cout<<"invalid inputs";
     }
 
     return 0;

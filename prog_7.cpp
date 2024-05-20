@@ -1,22 +1,30 @@
-#include <bits/stdc++.h>
+
+#include <iostream>
 using namespace std;
-
-int main() {
-    int a;
-    cout << "Enter a number: ";
-    cin >> a;
+int main()
+{
+    string username, password;
+    int otp;
     
-    int b;
-    cout << "enter position: ";
-    cin >> b;
-
-    int x=1<<b;
     
-    if(a&x){
-        cout<<"this bit is set";
-    }else{
-        cout<<"this bit is not set";
-    }
-
+    cout<<"enter username: ";
+    cin>> username;
+    
+    cout<<"enter password: ";
+    cin>> password;
+   
+    
+   if(username=="kunal" & password=="dhoom"){
+       cout<<"enter otp: ";
+       cin>>otp;
+       if(otp==1234){
+           cout<<"login done";
+       }else{
+           cout<<"invalid otp";
+       }
+   }else{
+       cout<<"invalid inputs";
+   }
+    
     return 0;
 }

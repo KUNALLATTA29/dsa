@@ -1,20 +1,27 @@
-#include <bits/stdc++.h>
+
+#include <iostream>
 using namespace std;
-
-int main() {
-    int a,b;
-    cout << "Enter a number: ";
-    cin >> a;
-    cout << "Enter the bit position you want to toggle (0-31): ";
-    cin >> b;
-
+int main()
+{
+    int amo;
+    string membership;
     
-    int x = 1 << b;
-
     
-    a = a ^ x;
-
-    cout << "new number: " << a << endl;
-
+    cout<<"enter amount: ";
+    cin>> amo;
+    
+    cout<<"enter membership (premium or not): ";
+    cin>> membership;
+   
+    
+    if(amo>50 & membership=="premium"){
+        cout<<amo - (amo * 0.10);
+    }else if(amo>50){
+        cout<<amo - (amo * 0.05);
+    }else{
+        cout<<amo;
+    }
+    
+    
     return 0;
 }
