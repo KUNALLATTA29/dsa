@@ -1,22 +1,24 @@
-
 #include <iostream>
-using namespace std;
-int main()
-{
-    int age;
-    string subs;
-    
-    cout<<"enter your age: ";
-    cin>> age;
-    
-    cout<<"enter your subscription: ";
-    cin>> subs;
-    
-    if(age>= 18 & subs=="valid"){
-        cout<<"access done";
-    }else{
-        cout<<"invalid inputs";
-    }
 
+using namespace std;
+
+int main(){
+    
+    int a;
+    cout<<"enter a percentage: ";
+    cin>> a;
+    
+    if(a>=90){
+        cout<<"A";
+    }else if(a>=80){
+        cout<<"B";
+    }else if(a>=70){
+        cout<<"C";
+    }else if(a>=60){
+        cout<<"D";
+    }else{
+        cout<<"F";
+    }
+    
     return 0;
 }

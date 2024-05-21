@@ -1,21 +1,19 @@
-
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main()
-{
-    int tim;
+
+int main(){
     
+    char a;
     
-    cout<<"enter due duration(more than a week:1 or not:0): ";
-    cin>> tim;
+    cout<<"enter a character: ";
+    cin>>a;
     
-    if(tim==1){
-        cout<<50 + (50*0.10);
+    if(a=='a' || a=='e' || a=='i' || a=='o' || a=='u'){
+        cout<<"vowel";
     }else{
-        cout<<50;
+        cout<<"consonant";
     }
     
-   
     
     return 0;
 }

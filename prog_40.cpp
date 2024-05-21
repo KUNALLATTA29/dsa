@@ -1,26 +1,30 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-double calculateArea(double a, double b, double c) {
-    double s = (a + b + c) / 2;
-    return sqrt(s * (s - a) * (s - b) * (s - c));
-}
-
 int main() {
-    double side1, side2, side3;
+    string a;
+    
 
-    cout << "Enter the length of side 1: ";
-    cin >> side1;
-
-    cout << "Enter the length of side 2: ";
-    cin >> side2;
-
-    cout << "Enter the length of side 3: ";
-    cin >> side3;
-
-    double area = calculateArea(side1, side2, side3);
-
-    cout << area << endl;
+    cout <<"enter day (must be in lowercase): ";
+    cin >> a;
+    
+    if(a=="monday"){
+        cout<<"weekday";
+    }else if(a=="tuesday"){
+        cout<<"weekday";
+    }else if(a=="wednesday"){
+        cout<<"weekday";
+    }else if(a=="thursday"){
+        cout<<"weekday";
+    }else if(a=="friday"){
+        cout<<"weekday";
+    }else if(a=="saturday"){
+        cout<<"weekend";
+    }else{
+        cout<<"weekend";
+    }
+    
+    
 
     return 0;
 }

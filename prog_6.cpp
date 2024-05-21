@@ -1,32 +1,22 @@
-
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main()
-{
-    int age, t;
+
+int main(){
+    
+    string a, b;
+    
+    cout<<"enter username: ";
+    cin>>a;
+    
+    cout<<"enter password: ";
+    cin>>b;
     
     
-    cout<<"enter age: ";
-    cin>> age;
-    
-    cout<<"enter time(0-24): ";
-    cin>> t;
-   
-    
-    if(age<=12){
-        if(t<17){
-            cout<< 100 - (100*0.10);
-        }else{
-            cout<< 100 - (100*0.05);
-        }
+    if(a=="kunal" && b=="dhoom"){
+        cout<<"active";
     }else{
-        if(t<17){
-            cout<< 100 - (100*0.05);
-        }else{
-            cout<< 100;
-        }
+        cout<<"try again";
     }
-    
     
     return 0;
 }

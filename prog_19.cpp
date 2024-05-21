@@ -1,26 +1,28 @@
-#include <bits/stdc++.h>
+
+#include <iostream>
 using namespace std;
-
-int factorial(int num) {
-    if (num == 0 || num == 1)
-        return 1;
-    else
-        return num * factorial(num - 1);
-}
-
-int main() {
-    int number, digit, sum = 0;
-
-    cout << "Enter a number: ";
-    cin >> number;
-
-    while (number != 0) {
-        digit = number % 10;
-        sum += factorial(digit);
-        number /= 10;
+int main()
+{
+    int age, t;
+    
+    
+    cout<<"enter age: ";
+    cin>> age;
+    
+    cout<<"enter time(0-24): ";
+    cin>> t;
+   
+    
+    if(age<=12 || age>=55){
+        if(t<17){
+            cout<< 100 - (100*0.10);
+        }else{
+            cout<< 100 - (100*0.05);
+        }
+    }else{
+        cout<< 100;
     }
-
-    cout << sum << endl;
-
+    
+    
     return 0;
 }

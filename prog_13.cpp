@@ -1,24 +1,23 @@
-
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main()
-{
-    int vip, tic;
+
+int main(){
     
+    int a;
     
-    cout<<"Are you a vip(yes:1, no:0): ";
-    cin>> vip;
+    cout<<"enter age: ";
+    cin>>a;
     
-    cout<<"do you have premium ticket(yes:1, no:0): ";
-    cin>> tic;
-    
-    if(vip || tic){
-        cout<<"you have access";
+    if(a<=16){
+        cout<<"child";
+    }else if(a<=25){
+        cout<<"teenager";
+    }else if(a<=50){
+        cout<<"adult";
     }else{
-        cout<<"you don't have access";
+        cout<<"senior";
     }
     
-   
     
     return 0;
 }

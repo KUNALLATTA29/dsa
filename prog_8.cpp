@@ -1,23 +1,18 @@
-
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main()
-{
-    int age, criminal;
+
+int main(){
     
+    int a;
     
-    cout<<"enter age: ";
-    cin>> age;
+    cout<<"enter a number: ";
+    cin>>a;
     
-    cout<<"are you a criminal(yes: 1, no:0): ";
-    cin>> criminal;
-   
-    
-   if(age>=18 & criminal==0){
-       cout<<"you have voting right";
-   }else{
-       cout<<"you don't have voting right";
-   }
+    if(a%5==0 && a%7==0){
+        cout<<"this number is divisible by 5 and 7";
+    }else{
+        cout<<"this number is not divisible by 5 and 7";
+    }
     
     return 0;
 }

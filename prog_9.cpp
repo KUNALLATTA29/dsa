@@ -1,23 +1,22 @@
-
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main()
-{
-    int tem;
+
+int main(){
     
+    float a;
     
     cout<<"enter temprature: ";
-    cin>> tem;
+    cin>>a;
     
-    if(tem>=40){
-        cout<<"HOT";
-    }else if(tem>=20){
-        cout<<"MODERATE";
+    char b;
+    cout<<"c or f: ";
+    cin>>b;
+    
+    if(b=='c'){
+        cout<<(a*9/5) +32;
     }else{
-        cout<<"COLD";
+        cout<<(a-32)*5/9;
     }
-    
-   
     
     return 0;
 }

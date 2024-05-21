@@ -1,21 +1,27 @@
-
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main()
-{
-    int per;
+
+int main(){
     
+    int a,b,c;
     
-    cout<<"enter percentage: ";
-    cin>> per;
+    cout<<"enter 1st number: ";
+    cin>>a;
     
-    if(per>=40){
-        cout<<"Pass";
-    }else{
-        cout<<"Fail";
+    cout<<"enter 2nd number: ";
+    cin>>b;
+    
+    cout<<"enter 3rd number: ";
+    cin>>c;
+    
+    int max=a;
+    
+    if(max<b){
+        max=b;
+    }else if(max<c){
+        max=c;
     }
     
-   
-    
+    cout<<max;
     return 0;
 }

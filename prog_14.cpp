@@ -1,29 +1,21 @@
-
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main()
-{
-    int otp;
-    string pass;
+
+int main(){
+    int a;
+    cout<<"enter a number: ";
+    cin>>a;
     
-    
-    cout<<"enter password: ";
-    cin>> pass;
-    
-    
-    if(pass=="dhoom"){
-        cout<<"you have access";
-    }else{
-        cout<<"enter recovery code: ";
-        cin>>otp;
-        if(otp==1234){
-            cout<<"you have access";
-        }else{
-            cout<<"you don't have access";
-        }
+    int rem, sum=0, tem=a;
+    while(a>0){
+        rem=a%10;
+        sum=sum*10+rem;
+        a=a/10;
     }
-    
-   
-    
-    return 0;
+    cout<<sum<<endl;
+    if(tem==sum){
+        cout<<"this is palindrome";
+    }else{
+        cout<<"this is not a palindrome";
+    }
 }

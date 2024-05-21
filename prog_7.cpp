@@ -1,30 +1,24 @@
-
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main()
-{
-    string username, password;
-    int otp;
+
+int main(){
+    
+    string a;
+    
+    cout<<"enter signal: ";
+    cin>>a;
     
     
-    cout<<"enter username: ";
-    cin>> username;
     
-    cout<<"enter password: ";
-    cin>> password;
-   
-    
-   if(username=="kunal" & password=="dhoom"){
-       cout<<"enter otp: ";
-       cin>>otp;
-       if(otp==1234){
-           cout<<"login done";
-       }else{
-           cout<<"invalid otp";
-       }
-   }else{
-       cout<<"invalid inputs";
-   }
+    if(a=="red"){
+        cout<<"green";
+    }else if(a=="green"){
+        cout<<"yellow";
+    }else if(a=="yellow"){
+        cout<<"red";
+    }else{
+        cout<<"invalid input";
+    }
     
     return 0;
 }

@@ -1,28 +1,32 @@
-#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
-bool isPrime(int num) {
-    if (num <= 1) return false;
-    for (int i = 2; i * i <= num; ++i) {
-        if (num % i == 0) {
-            return false;
-        }
+int main(){
+    
+    int a;
+    cout<<"enter a number: ";
+    cin>>a;
+    
+    
+    if(a==1){
+        cout<<"monday";
+    }else if(a==2){
+        cout<<"tuesday";
+    }else if(a==3){
+        cout<<"wednesday";
+    }else if(a==4){
+        cout<<"thursday";
+    }else if(a==5){
+        cout<<"friday";
+    }else if(a==6){
+        cout<<"saterday";
+    }else if(a==7){
+        cout<<"sunday";
     }
-    return true;
-}
-
-int main() {
-    int limit;
-
-    cout << "Enter the limit: ";
-    cin >> limit;
-
-    for (int i = 2; i <= limit; ++i) {
-        if (isPrime(i)) {
-            cout << i << " ";
-        }
-    }
-    cout << endl;
-
+    
+    
     return 0;
+    
+   
+   
 }

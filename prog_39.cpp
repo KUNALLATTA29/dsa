@@ -1,33 +1,20 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int factorial(int num) {
-    if (num <= 1)
-        return 1;
-    else
-        return num * factorial(num - 1);
-}
-
-int sumOfFactorialDigits(int num) {
-    while (num >= 10) {
-        int sum = 0;
-        while (num != 0) {
-            int digit = num % 10;
-            sum += factorial(digit);
-            num /= 10;
-        }
-        num = sum;
-    }
-    return num;
-}
-
 int main() {
-    int number;
+    int a;
+    
 
-    cout << "Enter a number: ";
-    cin >> number;
-
-    cout << sumOfFactorialDigits(number) << endl;
+    cout <<"enter grades(0-100): ";
+    cin >> a;
+    
+    if(a>90){
+        cout<<"you are eligible for scholarship";
+    }else{
+        cout<<"you are not eligible for scholarship";
+    }
+    
+    
 
     return 0;
 }

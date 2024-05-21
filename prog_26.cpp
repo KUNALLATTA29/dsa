@@ -1,26 +1,21 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int sumOfDigits(int num) {
-    int sum = 0;
-    while (num > 0 || sum > 9) {
-        if (num == 0) {
-            num = sum;
-            sum = 0;
-        }
-        sum += num % 10;
-        num /= 10;
-    }
-    return sum;
-}
-
 int main() {
-    int number;
+    int a;
 
-    cout << "Enter a number: ";
-    cin >> number;
+    cout << "Enter time (0-23): ";
+    cin >> a;
 
-    cout << sumOfDigits(number) << endl;
+    if (a >= 6 && a <= 12) {
+        cout << "morning";
+    } else if (a > 12 && a <= 16) {
+        cout << "afternoon";
+    } else if (a > 16 && a <= 20) {
+        cout << "evening";
+    } else {
+        cout << "night";
+    }
 
     return 0;
 }

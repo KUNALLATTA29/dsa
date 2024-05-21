@@ -1,18 +1,28 @@
-#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
-int main() {
-    int number, count = 0;
+int main(){
+    float h, w, k;
+    cout<<"enter height in cm: ";
+    cin>>h;
     
-    cout << "Enter a number: ";
-    cin >> number;
+    cout<<"enter weight in kg: ";
+    cin>>w;
     
-    while (number != 0) {
-        number /= 10;
-        ++count;
+    float c=h/100;
+    k=w/(c*c);
+    
+    cout<<k<<endl;
+    if(k<=18.5){
+        cout<<"underweight";
+    }else if(k<=24.9){
+        cout<<"normal";
+    }else{
+        cout<<"overweight";
     }
     
-    cout << "Number of digits: " << count << endl;
-    
     return 0;
+    
+   
+   
 }

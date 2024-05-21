@@ -1,19 +1,24 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-double PI = 3.14159;
-
-double calculateArea(double radius) {
-    return PI * radius * radius;
-}
-
 int main() {
-    double radius;
+    int a;
 
-    cout << "Enter the radius of the circle: ";
-    cin >> radius;
+    cout <<"enter a number: ";
+    cin >> a;
 
-    cout << calculateArea(radius) << endl;
+    if (a <= 0) {
+        cout << "Invalid input";
+    } else {
+        while (a != 1) {
+            if (a % 2 != 0) {
+                cout <<" is not power of 2.";
+                return 0;
+            }
+            a /= 2;
+        }
+        cout << "It is power of 2.";
+    }
 
     return 0;
 }

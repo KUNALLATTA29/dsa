@@ -1,29 +1,21 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-double calculateSeriesSum(int x, int n) {
-    double sum = 1.0;
-    double term = 1.0;
-
-    for (int i = 1; i <= n; ++i) {
-        term *= x;
-        term /= i;
-        sum += term;
-    }
-
-    return sum;
-}
-
 int main() {
-    int x, n;
+    int a;
 
-    cout << "Enter the value of x: ";
-    cin >> x;
-
-    cout << "Enter the value of n: ";
-    cin >> n;
-
-    cout <<calculateSeriesSum(x, n) << endl;
+    cout <<"enter quantity of books(cost per book is 500): ";
+    cin >> a;
+    
+    int cost =a*500;
+    
+    if(a<=5){
+        cout<<cost;
+    }else if(a>5 && a<=10){
+        cout<<cost-(cost*.10);
+    }else if(a>10){
+        cout<<cost-(cost*.20);
+    }
 
     return 0;
 }

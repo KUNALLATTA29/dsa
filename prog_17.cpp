@@ -1,19 +1,30 @@
-#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
-int main() {
-    string str, reversedStr = "";
+int main(){
     
-    cout << "Enter a string: ";
-    getline(cin, str);
+    int a;
+    cout<<"how many characters in password: ";
+    cin>>a;
     
-    int length = str.length();
+    char b;
+    cout<<"is there any uppercase: (y/n) ";
+    cin>>b;
     
-    for (int i = length - 1; i >= 0; --i) {
-        reversedStr += str[i];
+    char c;
+    cout<<"is there any number: (y/n) ";
+    cin>>c;
+    
+    
+    if(a>12 && b=='y' && c=='y'){
+        cout<<"this is strong password";
+    }else{
+        cout<<"this is very weak";
     }
     
-    cout << "Reversed string: " << reversedStr << endl;
     
     return 0;
+    
+   
+   
 }

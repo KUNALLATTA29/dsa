@@ -1,25 +1,17 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-double power_n(double base, int power) {
-    if (power == 0)
-        return 1;
-    else if (power%2==0)
-        return power_n(base*base, power/2);
-    else
-        return base * power_n(base*base, (power-1)/2);
-}
-
 int main() {
-    double base;
-    int power;
+    int a;
 
-    cout << "Enter base: ";
-    cin >> base;
-    cout << "Enter power: ";
-    cin >> power;
+    cout <<"enter a number: ";
+    cin >> a;
 
-    cout <<power_n(base, power) << endl;
+    if(a%3==0 && a%5==0){
+        cout<<"divisible";
+    }else{
+        cout<<"not divisible";
+    }
 
     return 0;
 }

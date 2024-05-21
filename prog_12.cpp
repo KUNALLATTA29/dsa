@@ -1,24 +1,23 @@
-
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main()
-{
-    int amo, pur;
+
+int main(){
     
+    int a;
     
-    cout<<"enter amount: ";
-    cin>> amo;
+    cout<<"enter age: ";
+    cin>>a;
     
-    cout<<"enter number of purchases: ";
-    cin>> pur;
-    
-    if(pur>5){
-        cout<<amo - (amo* 0.15);
+    if(a<=16){
+        cout<<"child";
+    }else if(a<=25){
+        cout<<"teenager";
+    }else if(a<=50){
+        cout<<"adult";
     }else{
-        cout<< amo - (amo * 0.10);
+        cout<<"senior";
     }
     
-   
     
     return 0;
 }

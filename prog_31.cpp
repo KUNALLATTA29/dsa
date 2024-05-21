@@ -1,10 +1,17 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main() {
-    cout << "ASCII characters with their integer values:" << endl;
-    for (int i = 0; i <= 127; ++i) {
-        cout << "ASCII value of character '" << char(i) << "' is " << i << endl;
+    int a, b, c;
+
+    cout <<"enter three sides of triangle: ";
+    cin >> a >> b>>c;
+
+    if(a+b>c || a+c>b || b+c>a ){
+        cout<<"triangle is valid";
+    }else{
+        cout<<"it's not valid";
     }
+
     return 0;
 }

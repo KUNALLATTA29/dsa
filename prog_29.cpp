@@ -1,23 +1,20 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-bool isLeapYear(int year) {
-    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-        return true;
-    }
-    return false;
-}
-
 int main() {
-    int year;
+    int a;
 
-    cout << "Enter a year: ";
-    cin >> year;
+    cout <<"enter age: ";
+    cin >> a;
 
-    if (isLeapYear(year)) {
-        cout << year << " is a leap year." << endl;
-    } else {
-        cout << year << " is not a leap year." << endl;
+    if (a<=12) {
+        cout << "child";
+    }else if(a>=13 && a<=19){
+        cout<<"teenager";
+    }else if(a>=20 && a<=59){
+        cout<<"adult";
+    }else{
+        cout<<"senior";
     }
 
     return 0;
