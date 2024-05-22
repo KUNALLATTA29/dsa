@@ -1,30 +1,21 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-    
-    int a, b, c;
-    
-    cout<<"enter 1st angle: ";
-    cin>>a;
-    
-    cout<<"enter 2nd angle: ";
-    cin>>b;
-    
-    cout<<"enter 3rd angle: ";
-    cin>>c;
-    
-    if(a+b+c == 180){
-        if(a==90 || b==90 || c==90){
-            cout<<"this is right angle triangle";
-        }else if(a>90 || b>90 || c>90){
-            cout<<"this is a obtuse angle triangle";
-        }else{
-            cout<<"this is a acute angle triangle";
-        }
-    }else{
-        cout<<"invalid inputs";
-    }
-    
-    return 0;
+double volume(double s){
+    return s*s*s;
+}
+
+double volume(double r, double h){
+    return 3.14 * r*r *h;
+}
+
+int main ()
+{
+  double radius = 2.4;
+  double height = 7.7;
+  double side_lenght = 2.2;
+
+  cout<<"area of cube: "<<volume(side_lenght)<<endl;
+  cout<<"area of cylinder: "<<volume(radius, height)<<endl;
+  return 0;
 }

@@ -1,19 +1,20 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-    
-    char a;
-    
-    cout<<"enter a character: ";
-    cin>>a;
-    
-    if(a=='a' || a=='e' || a=='i' || a=='o' || a=='u'){
-        cout<<"vowel";
-    }else{
-        cout<<"consonant";
-    }
-    
-    
-    return 0;
+int power(int a, int n){
+    return pow(a,n);
+}
+
+float power(float a, float n){
+    return pow(a,n);
+}
+
+int main ()
+{
+  int b1 = 2, p1 = 3;
+  float b2 = 3.1, p2 = 2;
+  
+  cout<<"power of int: "<<power(b1, p1)<<endl;
+  cout<<"power of float: "<<power(b2, p2)<<endl;
+  return 0;
 }

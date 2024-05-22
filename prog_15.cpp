@@ -1,28 +1,27 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-    float h, w, k;
-    cout<<"enter height in cm: ";
-    cin>>h;
-    
-    cout<<"enter weight in kg: ";
-    cin>>w;
-    
-    float c=h/100;
-    k=w/(c*c);
-    
-    cout<<k<<endl;
-    if(k<=18.5){
-        cout<<"underweight";
-    }else if(k<=24.9){
-        cout<<"normal";
-    }else{
-        cout<<"overweight";
+double area(int s1, double l1){
+    return (s1 * pow(l1, 2)) / (4 * tan(3.14 / s1));
+}
+
+double area(int s2, double l2[]){
+    double sum = 0.0;
+    for (int i = 0; i < s2; ++i) {
+        int j = (i + 1) % s2;
+        sum += (l2[i] * l2[j]) / 2;
     }
-    
-    return 0;
-    
-   
-   
+    return sum;
+}
+
+int main ()
+{
+  int s1 = 5, s2 = 3;
+  double l1 = 4.0;
+  double l2[] = {2.0, 4.0, 6.0};
+  
+  
+  cout<<"area of regular polygon: "<<area(s1, l1)<<endl;
+  cout<<"area of irregular polygon: "<<area(s2, l2)<<endl;
+  return 0;
 }

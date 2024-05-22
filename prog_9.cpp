@@ -1,22 +1,21 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-    
-    float a;
-    
-    cout<<"enter temprature: ";
-    cin>>a;
-    
-    char b;
-    cout<<"c or f: ";
-    cin>>b;
-    
-    if(b=='c'){
-        cout<<(a*9/5) +32;
-    }else{
-        cout<<(a-32)*5/9;
-    }
-    
-    return 0;
+double area(double b1, double h){
+    return b1*h;
+}
+
+double area(double b1, double b2, double h){
+    return 0.5 *(b1+b2)* h;
+}
+
+int main ()
+{
+  double b1 = 22.3;
+  double h = 33.1;
+  double b2 = 2.4;
+  
+  cout<<"area of parallelogram: "<<area(b1, h)<<endl;
+  cout<<"area of trapezoid: "<<area(b1, b2, h)<<endl;
+  return 0;
 }

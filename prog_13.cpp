@@ -1,23 +1,28 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-    
-    int a;
-    
-    cout<<"enter age: ";
-    cin>>a;
-    
-    if(a<=16){
-        cout<<"child";
-    }else if(a<=25){
-        cout<<"teenager";
-    }else if(a<=50){
-        cout<<"adult";
+int factorial(int n){
+    if(n==0 || n==1){
+        return 1;
     }else{
-        cout<<"senior";
+        return n*factorial(n-1);
     }
-    
-    
-    return 0;
+}
+
+long factorial(long n){
+    if(n==0 || n==1){
+        return 1;
+    }else{
+        return n*factorial(n-1);
+    }
+}
+
+int main ()
+{
+  int n1 = 10;
+  long n2 = 20;
+  
+  cout<<"factorial of int: "<<factorial(n1)<<endl;
+  cout<<"factorial of long int: "<<factorial(n2)<<endl;
+  return 0;
 }
