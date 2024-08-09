@@ -1,24 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
-void print(int k){
-    cout<<"integer: "<<k<<endl;
-}
-
-void print(float k){
-    cout<<"float: "<<k<<endl;
-}
-
-void print(string k){
-    cout<<"string: "<<k<<endl;
-}
 
 int main(){
-    int a = 1;
-    float b = 2.3;
-    string c = "kunal";
     
-    print(a);
-    print(b);
-    print(c);
+    stack<int> st;
+    for(int i=1;i<=10;i++){
+        st.push(i);
+    }
+    while(!st.empty()){
+        cout<<st.top()<<endl;
+        st.pop();
+    }
     return 0;
 }
