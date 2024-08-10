@@ -1,28 +1,31 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int factorial(int n){
-    if(n==0 || n==1){
-        return 1;
-    }else{
-        return n*factorial(n-1);
+stack<string> zoom(stack<string> st){
+    stack<string> tem;
+    while(!st.empty()){
+        tem.push(st.top());
+        st.pop();
     }
+    
+    return tem;
 }
 
-long factorial(long n){
-    if(n==0 || n==1){
-        return 1;
-    }else{
-        return n*factorial(n-1);
+int main(){
+    
+    stack<string> st;
+    st.push("first");
+    st.push("second");
+    st.push("third");
+    st.push("fourth");
+    
+    stack<string> ans = zoom(st);
+    
+    while(!ans.empty()){
+        cout<<ans.top()<<" ";
+        ans.pop();
     }
-}
-
-int main ()
-{
-  int n1 = 10;
-  long n2 = 20;
-  
-  cout<<"factorial of int: "<<factorial(n1)<<endl;
-  cout<<"factorial of long int: "<<factorial(n2)<<endl;
-  return 0;
+    
+   
+    return 0;
 }
