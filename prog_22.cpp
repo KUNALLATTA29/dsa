@@ -1,36 +1,40 @@
-
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
-int main()
-{
-    char a, b;
+
+bool sol(set<int> arr, int num){
+    return arr.find(num) != arr.end(); 
+}
+
+int main(){
     
+    int a,b,c;
+    cin>>a>>b>>c;
     
-    cout<<"1st choose one(r,p,s): ";
-    cin>> a;
+    int maxi = max({a,b,c});
     
-    cout<<"2nd choose one(r,p,s): ";
-    cin>> b;
+    if(maxi==a){
+        set<int> set1 = {1,2,3,4,5,6};
+        if(sol(set1, a)){
+            cout<<a<<" is in set.";
+        }else{
+            cout<<a<<" is not in set.";
+        }
+    }else if(maxi==b){
+        set<int> set1 = {1,2,3,4,5,6};
+        if(sol(set1, b)){
+            cout<<b<<" is in set.";
+        }else{
+            cout<<b<<" is not in set.";
+        }
+    }else{
+        set<int> set1 = {1,2,3,4,5,6};
+        if(sol(set1, c)){
+            cout<<c<<" is in set.";
+        }else{
+            cout<<c<<" is not in set.";
+        }
+    }
     
-   if(a=='r' && b=='r'){
-       cout<<"tie";
-   }else if(a=='r' && b=='p'){
-       cout<<"2nd wins";
-   }else if(a=='r' && b=='s'){
-       cout<<"1st wins";
-   }else if(a=='p' && b=='p'){
-       cout<<"tie";
-   }else if(a=='p' && b=='s'){
-       cout<<"2nd wins";
-   }else if(a=='p' && b=='r'){
-       cout<<"1st wins";
-   }else if(a=='s' && b=='s'){
-       cout<<"tie";
-   }else if(a=='s' && b=='p'){
-       cout<<"1st wins";
-   }else if(a=='s' && b=='r'){
-       cout<<"2nd wins";
-   }
     
     return 0;
 }

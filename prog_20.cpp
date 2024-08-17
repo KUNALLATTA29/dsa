@@ -1,24 +1,16 @@
-
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
-int main()
-{
-    char a;
+
+int main(){
     
+    set<int> set1 = {10, 20, 23, 40, 50, 60, 89};
+    set<int> set2 = {50,60,89};
     
-    cout<<"enter a character:(a, A, #, 2) ";
-    cin>> a;
-    
-    if(a=='a'){
-        cout<<"lowercase letter";
-    }else if(a=='A'){
-        cout<<"uppercase letter";
-    }else if(a=='#'){
-        cout<<"special character";
+    if(includes(set1.begin(),set1.end(),set2.begin(),set2.end())){
+        cout<<"yes";
     }else{
-        cout<<"digit";
+        cout<<"no";
     }
-    
     
     return 0;
 }
